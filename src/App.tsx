@@ -11,6 +11,7 @@ const GitHubIcon = () => (
     </svg>
 );
 
+
 const App: Component = () => {
   return (
       <div class="min-h-screen flex flex-col bg-white">
@@ -44,26 +45,28 @@ const App: Component = () => {
           </nav>
         </header>
 
-        {/* Hero Section - More Impact */}
-        <section class="flex-1 flex items-center pt-24">
-          <div class="container mx-auto px-4 sm:px-6 text-center">
-            <div class="max-w-3xl mx-auto">
-              <h1 class="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-500 bg-clip-text text-transparent">
-                Solutions Architect
-              </h1>
-              <p class="text-lg text-gray-600 mb-8">
-                Building scalable foundations for digital experiences<br class="hidden sm:block" />
-                with Go, Rust, and modern web technologies.
-              </p>
-              <div class="flex justify-center space-x-4">
-                <a
-                    href="#contact"
-                    class="px-6 py-3 border border-gray-900 text-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 text-sm"
-                >
-                  Let's Connect
-                </a>
-              </div>
-            </div>
+        {/* Hero Banner with Overlayed Text */}
+        <section class="relative w-full h-[500px] sm:h-[600px] md:h-[700px] bg-gray-900">
+          <img
+              src="/images/bruno-coding.jpg"
+              alt="Banner illustration of Bruno coding on the beach"
+              class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+          />
+          <div class="absolute inset-0"></div>
+          <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+            <h1 class="text-4xl sm:text-6xl font-bold mb-6  bg-clip-text text-white">
+              Web Developer
+            </h1>
+            <p class="text-lg text-white mb-8 drop-shadow-lg font-bold">
+              Building scalable foundations for digital experiences<br class="hidden sm:block"/>
+              with Go, Rust, and modern web technologies.
+            </p>
+            <a
+                href="#contact"
+                class="inline-block px-8 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-700 transition-colors duration-300 text-sm"
+            >
+              Let's connect
+            </a>
           </div>
         </section>
 
@@ -94,7 +97,7 @@ const App: Component = () => {
                   <span class="text-indigo-600">①</span>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-900 mb-2">D2D3.com</h3>
-                <p class="text-sm text-gray-500 mb-4">Municipal Solutions Architect</p>
+                <p class="text-sm text-gray-500 mb-4">Full Stack Developer</p>
                 <ul class="space-y-3 text-gray-600">
                   <li class="flex">
                     <span class="text-gray-400 mr-2">→</span>
