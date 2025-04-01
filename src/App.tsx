@@ -18,7 +18,7 @@ const App: Component = () => {
         {/* Header - Simplified */}
         <header class="sticky top-0 z-10 bg-white/90 backdrop-blur-sm border-b border-gray-100">
           <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-            <div class="font-semibold text-gray-900 tracking-tight text-lg">Bruno Moyse</div>
+            <div class="font-semibold text-gray-900 tracking-tight text-lg">Bruno<span class="hidden sm:inline"> Moyse</span></div>
             <div class="flex items-center gap-8">
               <ul class="flex space-x-6">
                 {['Experience', 'Projects', 'Contact'].map((item) => (
@@ -52,13 +52,13 @@ const App: Component = () => {
               alt="Banner illustration of Bruno coding on the beach"
               class="absolute inset-0 w-full h-full object-cover object-center opacity-80"
           />
-          <div class="absolute inset-0"></div>
-          <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+          <div class="absolute inset-0 bg-black/10"></div>
+          <div class="relative z-9 h-full flex flex-col items-center justify-center text-center px-4">
             <h1 class="text-4xl sm:text-6xl font-bold mb-6  bg-clip-text text-white">
               Web Developer
             </h1>
             <p class="text-lg text-white mb-8 drop-shadow-lg font-bold">
-              Building scalable foundations for digital experiences<br class="hidden sm:block"/>
+              Building scalable foundations for digital experiences <br class="hidden sm:block"/>
               with Go, Rust, and modern web technologies.
             </p>
             <a
@@ -90,11 +90,13 @@ const App: Component = () => {
           <div class="container mx-auto px-4 sm:px-6 max-w-3xl">
             <h2 class="text-gray-500 text-sm font-medium mb-8">Experience</h2>
 
-            <div class="space-y-12 relative before:absolute before:left-7 before:h-full before:w-px before:bg-gray-100">
+            <div
+                class="space-y-12 relative before:absolute before:left-7 before:h-full before:w-px before:bg-gray-100">
               {/* D2D3 */}
               <div class="relative pl-24">
-                <div class="absolute left-0 top-1 w-14 h-14 bg-indigo-50 rounded-full flex items-center justify-center">
-                  <span class="text-indigo-600">①</span>
+                <div
+                    class="absolute left-0 top-1 w-14 h-14 bg-indigo-50 rounded-full flex items-center justify-center">
+                  <img src="/images/d2d3.png" alt="D2D3 Logo" class="w-10 h-10"/>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-900 mb-2">D2D3.com</h3>
                 <p class="text-sm text-gray-500 mb-4">Full Stack Developer</p>
@@ -112,10 +114,11 @@ const App: Component = () => {
 
               {/* Crisis Center */}
               <div class="relative pl-24">
-                <div class="absolute left-0 top-1 w-14 h-14 bg-indigo-50 rounded-full flex items-center justify-center">
-                  <span class="text-indigo-600">②</span>
+                <div
+                    class="absolute left-0 top-1 w-14 h-14 bg-indigo-50 rounded-full flex items-center justify-center">
+                  <img src="/images/nccn.png" alt="NCCN Logo" class="w-10 h-10"/>
                 </div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">National Crisis Center</h3>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">National Crisis Center (NCCN)</h3>
                 <p class="text-sm text-gray-500 mb-4">Backend Systems Developer</p>
                 <ul class="space-y-3 text-gray-600">
                   <li class="flex">
@@ -138,29 +141,54 @@ const App: Component = () => {
             <h2 class="text-gray-500 text-sm font-medium mb-8">Personal projects</h2>
 
             <div class="grid gap-8 sm:grid-cols-2">
-              <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 class="text-lg font-semibold mb-4">Restaurant web shop</h3>
-                <p class="text-gray-600 text-sm mb-6">
-                  Full-stack solution (with dashboard for product management) with Nuxt 3 frontend and Go backend
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">PostgreSQL</span>
-                  <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Mollie</span>
-                  <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Go</span>
-                  <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Rust</span>
-                  <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Nuxt</span>
+              {/* Restaurant web shop Card */}
+              <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 relative">
+                {/* Icon Logo */}
+                <div class="absolute -top-5 left-5 w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center">
+                  <img
+                      src="/images/tokyo-sushi.png"
+                      alt="Restaurant Icon"
+                      class="w-8 h-8"
+                  />
+                </div>
+                {/* Add top margin to push the content down so it doesn't overlap the icon */}
+                <div class="mt-8">
+                  <h3 class="text-lg font-semibold mb-4">Restaurant web shop</h3>
+                  <p class="text-gray-600 text-sm mb-6">
+                    Full-stack solution (with dashboard for product management) with Nuxt 3
+                    frontend and Go backend
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">PostgreSQL</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Mollie</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Go</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Rust</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Nuxt</span>
+                  </div>
                 </div>
               </div>
 
-              <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 class="text-lg font-semibold mb-4">DataChallenge 2024</h3>
-                <p class="text-gray-600 text-sm mb-6">
-                  Award-winning economic analysis platform for Walloon Region
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Python</span>
-                  <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Data Analysis</span>
-                  <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Vue</span>
+              {/* DataChallenge 2024 Card */}
+              <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 relative">
+                {/* Icon Logo */}
+                <div class="absolute -top-5 left-5 w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center">
+                  <img
+                      src="/images/digital-wallonia.png"
+                      alt="DataChallenge Icon"
+                      class="w-8 h-8"
+                  />
+                </div>
+                {/* Content offset */}
+                <div class="mt-8">
+                  <h3 class="text-lg font-semibold mb-4">DataChallenge 2024</h3>
+                  <p class="text-gray-600 text-sm mb-6">
+                    Award-winning economic analysis platform for Walloon Region
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Python</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Data Analysis</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs">Vue</span>
+                  </div>
                 </div>
               </div>
             </div>
